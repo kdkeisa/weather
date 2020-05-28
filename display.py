@@ -1,9 +1,11 @@
 from datetime import datetime
 
+from helper import convertKelvinToCelcius
+
 
 def displayTemperature(parsedWeather):
     temp = parsedWeather["main"]["temp"]
-    celcius = temp - 273.15
+    celcius = convertKelvinToCelcius(temp)
     print("temp is", celcius)
 
 
