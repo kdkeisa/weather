@@ -1,7 +1,7 @@
 import requests
 import json
 
-from weather import displayTemperature, displayWind, displaySunriseSunset
+from display import displayTemperature, displayWind, displaySunriseSunset
 
 location = input("please enter your location:\n")
 if location == "":
