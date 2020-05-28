@@ -9,8 +9,12 @@ def displayTemperature(parsedWeather):
 
 def displayWind(parsedWeather):
     wind = parsedWeather["wind"]["speed"]
-    gust = parsedWeather["wind"]["gust"]
-    display_wind = str.format("wind speed is {} and the gust is {}", wind, gust)
+    if "gust" in parsedWeather["wind"]:
+        gust = parsedWeather["wind"]["gust"]
+        display_wind = str.format("wind speed is {} and the gust is {}", wind, gust)
+    else:
+        display_wind = str.format("wind speed is {}", wind)
+
     print(display_wind)
 
 
