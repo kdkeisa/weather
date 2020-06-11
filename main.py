@@ -1,10 +1,10 @@
-from display import displayTemperature, displayWind, displaySunriseSunset
-from input import getLocation
-from weatherFetcher import getWeatherToday
+from input import getPlaceName
+from weatherGraph import graph
 
+placeName = getPlaceName()
+graph(placeName)
 
-location = getLocation()
-weather = getWeatherToday(location)
-displayTemperature(weather)
-displayWind(weather)
-displaySunriseSunset(weather)
+# weather = getWeatherToday(location)
+# displayTemperature(weather)
+# displayWind(weather)
+# displaySunriseSunset(weather)
